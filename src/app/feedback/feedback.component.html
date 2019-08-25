@@ -1,0 +1,26 @@
+<!-- <div class="breadcrumbs">
+    <div class="container">
+      <ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+        <li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+        <li class="active">Register Page</li>
+      </ol>
+    </div>
+  </div> -->
+  <!-- //breadcrumbs -->
+  <!-- register -->
+  <div class="register">
+    <div class="container">
+      <h2>Feedback form</h2>
+      <div class="login-form-grids">
+        <h5></h5>
+          <input type="text" placeholder="Name" required=" " name="nm" [(ngModel)]="name" >
+          <input type="text" placeholder="Email" required=" " name="nm" [(ngModel)]="email" ><br>
+          <textarea class="form-control" [(ngModel)]="feedback" placeholder="Please guve your feedback Here"></textarea><br>
+          <input type="submit" value="Submit Feedback" name="s1" (click)="addfeedback()" ><br>
+        <br>{{msg}}
+      </div>
+     
+    </div>
+  </div>
+  
+  

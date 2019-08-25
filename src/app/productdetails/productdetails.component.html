@@ -1,0 +1,130 @@
+<div class="breadcrumbs">
+		<div class="container">
+			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+				<li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+				<li class="active">Singlepage</li>
+			</ol>
+		</div>
+	</div>
+<!-- //breadcrumbs -->
+	<div class="products">
+		<div class="container">
+			<div class="agileinfo_single">
+				
+				<div class="col-md-4 agileinfo_single_left">
+          <img id="example" src="uploads/{{productpic}}" alt=" " class="img-responsive" >
+
+				</div>
+				<div class="col-md-8 agileinfo_single_right">
+				<h2>{{productname}}</h2>
+				<div class="rating1">
+						<!-- <span class="starRating">
+							<input id="rating5" type="radio" name="rating" value="5">
+							<label for="rating5">5</label>
+							<input id="rating4" type="radio" name="rating" value="4">
+							<label for="rating4">4</label>
+							<input id="rating3" type="radio" name="rating" value="3" checked="">
+							<label for="rating3">3</label>
+							<input id="rating2" type="radio" name="rating" value="2">
+							<label for="rating2">2</label>
+							<input id="rating1" type="radio" name="rating" value="1">
+							<label for="rating1">1</label>
+						</span> -->
+						<img *ngIf="p1" src="images/star1.png">
+						<img *ngIf="!p1" src="images/star.png">
+
+						<img *ngIf="p2" src="images/star1.png">
+						<img *ngIf="!p2" src="images/star.png">
+
+						<img *ngIf="p3" src="images/star1.png">
+						<img *ngIf="!p3" src="images/star.png">
+
+						<img *ngIf="p4" src="images/star1.png">
+						<img *ngIf="!p4" src="images/star.png">
+
+						<img *ngIf="p5" src="images/star1.png">
+						<img *ngIf="!p5" src="images/star.png">
+
+
+						<label style="color: green">{{productrating}}*</label>
+
+					</div>
+				
+					<div class="w3agile_description">
+						<h4>Description</h4>
+						<p>{{description}}</p>
+					</div>
+					<div class="snipcart-item block">
+						<div class="snipcart-thumb agileinfo_single_right_snipcart">
+							<select class="m-sing" [(ngModel)]="qty"> 
+								<option *ngFor="let x of showstock">{{x}}</option>
+							</select>
+							<br><br>
+							<h4 class="m-sing">Rs. {{remprice}}<span>Rs.{{price}}</span></h4>
+						</div>
+						<div class="snipcart-details agileinfo_single_right_details">
+							<form action="#" method="post">
+								<fieldset>
+									
+						  <input type="submit" name="submit" value="Add to cart" class="button" (click)="addtocart()">
+					
+							</fieldset>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+<div class="register">
+	<div class="container">
+		<div class="login-form-grids">
+			<p>Rate This product
+			<select class="m-sing" [(ngModel)]="rating"> 
+				<option *ngFor="let x of showrating">{{x}}</option>
+			</select>
+			</p>
+			<br>
+			<label>Write Review</label><br>
+			<textarea placeholder="Add a review" rows="3" columns="20" [(ngModel)]="review" class="form-control"	>
+			</textarea>
+			<input type="submit" name="submit" value="Add Review" (click)="addreview()">
+			{{msg1}}
+		</div>
+	</div>
+</div>
+
+<div class="login">
+		<div class="container">
+		<div class="agile_top_brands_grids">
+		   
+		  <!-- <div  *ngFor="let x of allproducts | paginate: config" class="col-md-4 top_brand_left"> -->
+			  <h4>All Reviews</h4>
+			<div  *ngFor="let x of allreviews" class="col-md-4 top_brand_left">
+			<div class="hover14 column">
+			  <div class="agile_top_brand_left_grid">
+				<div class="agile_top_brand_left_grid1">
+				  <figure>
+					<label style="color: green"  >{{x.rating}}*</label>
+					<div class="snipcart-item block" >
+					  <div class="snipcart-thumb" >
+						<!-- <h>{{x.rating}}</h4> -->
+						<p>{{x.review}}</p>
+					  </div>
+					</div>
+				  </figure>
+				</div>
+			  </div>
+			</div>
+	
+		  </div>
+		  <!-- <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls> -->
+	
+		</div>
+
+		  <div class="clearfix"> </div>
+		
+		</div>
+		  </div>
+
